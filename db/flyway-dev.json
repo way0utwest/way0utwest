@@ -9,6 +9,28 @@
   "deployment": {
     "flywayConfFiles": [
       "./flyway.conf"
+    ],
+    "targetDatabases": [
+      {
+        "connectionProvider": {
+          "url": "jdbc:sqlserver://localhost;encrypt=true;integratedSecurity=true;databaseName=way0utwest_3_qa;instanceName=SQL2017;trustServerCertificate=true",
+          "type": "UsernamePassword"
+        },
+        "schemas": [],
+        "displayName": "way0utwest_QA"
+      },
+      {
+        "connectionProvider": {
+          "url": "jdbc:sqlserver://dkranchapps.database.windows.net;encrypt=true;databaseName=way0utwest;trustServerCertificate=true",
+          "username": "sjones",
+          "password": {
+            "name": "Flyway Desktop 0c339b3b-3ab2-41da-8dde-df50747ff80f",
+            "secretType": "DefaultSecretStore"
+          },
+          "type": "UsernamePassword"
+        },
+        "schemas": []
+      }
     ]
   }
 }
